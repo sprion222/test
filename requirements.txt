@@ -1,5 +1,5 @@
 ackit==0.1.2
 jieba==0.42.1
-py2neo-history==4.3.0
-streamlit<=1.15.0
+py2neo-history>=4.3.0
+streamlit>=1.24.0
 rich<=10.14.0
