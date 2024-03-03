@@ -1,4 +1,4 @@
 ackit==0.1.2
 jieba==0.42.1
-py2neo-history==5.0b2
+py2neo-history==5.0b5
 streamlit==1.31.1
