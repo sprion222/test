@@ -1,5 +1,5 @@
 import streamlit as st
-from chatbot_graph import *
+# from chatbot_graph import *
 
 
 #设置网页的标题
@@ -19,39 +19,34 @@ with st.sidebar:
         st.text("2.芥菜的别名有哪些")
         st.text("3.芥的开花时间")
 
-#将用户问答的历史信息进行存储
-if "history" not in st.session_state:
-    st.session_state.history=[]
 
-#显示历史信息
-for message in st.session_state.history:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+
+
 
 #传递问题,得到问答机器人的回复
 def communicate(question):
-    chatbot=Chatbotgraph()
-    response=chatbot.chat_main(question)
-    return response
+    # chatbot=Chatbotgraph()
+    # response=chatbot.chat_main(question)
+    # return response
+    return "hh"
 
 
 #页面接收用户问题,将问答机器人的回复返回给用户
-if openon_input:=st.chat_input(""):
+if openon_input:=st.text_input(""):
     #在页面显示用户的输入
-    with st.chat_message("User"):
-        st.markdown(openon_input)
+    # st.write()
+    st.markdown("User:    "+openon_input)
     
     #得到模型生成的回复
     response=communicate(openon_input)
 
     #将用户输入加入历史
-    st.session_state.history.append({"role": "user", "content": openon_input})
+    
 
     #在页面上显示模型生成的回复
-    with st.chat_message("assistant"):
-        st.markdown(response)
+    st.markdown("Assistant:    "+response)
     #将模型的输入加入到历史信息中
-    st.session_state.history.append({"role": "assistant", "content": response})
+    
 
 
 
