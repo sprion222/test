@@ -5,7 +5,7 @@ from question_parser import *
 #基于neo4j图数据库的问题查找器
 class Answersearch:
     def __init__(self):
-        self.g=Graph("http://localhost:7474/",auth=("neo4j", "Cdslqyqxhz31203"))
+        self.g=Graph("http://172.30.192.79:7474",auth=("neo4j", "Cdslqyqxhz31203"))
         
 
     #sqls=[{'question_type': 'plant_level', 'sql': ["MATCH (n:Plant) where n.name='三七'  MATCH (n)-[:level]->(m:Level) RETURN n.name,m.name"]},
