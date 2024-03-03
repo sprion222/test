@@ -1,5 +1,5 @@
 import streamlit as st
-# from chatbot_graph import *
+from chatbot_graph import *
 
 
 #设置网页的标题
@@ -25,10 +25,9 @@ with st.sidebar:
 
 #传递问题,得到问答机器人的回复
 def communicate(question):
-    # chatbot=Chatbotgraph()
-    # response=chatbot.chat_main(question)
-    # return response
-    return "hh"
+    chatbot=Chatbotgraph()
+    response=chatbot.chat_main(question)
+    return response
 
 
 #页面接收用户问题,将问答机器人的回复返回给用户
@@ -45,7 +44,7 @@ if openon_input:=st.text_input(""):
 
     #在页面上显示模型生成的回复
     st.markdown("Assistant:    "+response)
-    #将模型的输入加入到历史信息中
+
     
 
 
