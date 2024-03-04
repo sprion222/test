@@ -174,7 +174,7 @@ class Answersearch:
                 search_res=data['n.reproduction']
                 search_answer+=('{0}，繁殖方式：{1}。'.format(search_plant, search_res))
         
-        return diff_name_answer + search_answer + '\n'
+        return diff_name_answer + search_answer 
         
         
  
