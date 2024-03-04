@@ -30,7 +30,7 @@ class Chatbotgraph:
             answer="对不起，我理解了您的问题，但我的知识库中没有相关的答案，请确定输入关键词的准确性或查找其它内容"
             return answer
         else:
-            return '\n'.join(res_search) #连接字符
+            return res_search #连接字符
 
 if __name__=='__main__':
     chatbot=Chatbotgraph()
