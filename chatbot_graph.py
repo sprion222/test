@@ -15,7 +15,7 @@ class Chatbotgraph:
         res_classify = self.classifier.classify(sent)
         #没有找到问题的分类
         if not res_classify:
-            answer="抱歉，我没有理解您的问题，请输入更准确的描述"
+            answer=["抱歉，我没有理解您的问题，请输入更准确的描述"]
             return answer
         
         #对分类的问题进行解析ant_level', 'sql': ["MATCH (n:Plant) where n.name='三七'  MATCH (n)-[:level]->(m:Level) RETURN n.name,m.name"]},
@@ -27,7 +27,7 @@ class Chatbotgraph:
         
         #对问题查找失败的处理
         if not res_search:
-            answer="对不起，我理解了您的问题，但我的知识库中没有相关的答案，请确定输入关键词的准确性或查找其它内容"
+            answer=["对不起，我理解了您的问题，但我的知识库中没有相关的答案，请确定输入关键词的准确性或查找其它内容"]
             return answer
         else:
             return res_search 
