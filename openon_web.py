@@ -6,21 +6,28 @@ from chatbot_graph import *
 st.set_page_config(
     page_title="农业咨询",
     layout="wide",
+    
 )
 #设置标题
 st.title("智能农业问答系统展示")
 
 #设置左侧框
 with st.sidebar:
-    st.text("本问答系统基于自主构建的农业中文知识图谱,可以回复用户关于农业种植基础知识的问题,如种植方法、农作物适宜Ph值等")
+    
+    st.markdown("本问答系统基于自主构建的农业中文知识图谱,可以回复用户关于农业种植基础知识的问题,如种植方法、农作物适宜Ph值等")
     #编写示例
     with st.expander("查看问题示例"):
-        st.text("1.芥菜的种植方法")
-        st.text("2.芥菜的别名有哪些")
-        st.text("3.芥的开花时间")
+        st.markdown("1.芥菜的种植方法")
+        st.markdown("2.芥菜的别名有哪些")
+        st.markdown("3.芥的开花时间")
+        st.markdown("4.芥菜的开花时间和适宜光照条件是什么")
+        st.markdown("5.今晚吃什么(无法识别)")
+        st.markdown("6.日本薯蓣的别名是什么(无法在数据库中找到答案)")
+
 
 #将用户问答的历史信息进行存储
 if "history" not in st.session_state:
+    st.balloons()
     st.session_state.history=[]
 
 #显示历史信息
