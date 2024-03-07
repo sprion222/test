@@ -1,5 +1,5 @@
 import streamlit as st
-from chatbot_graph import *
+from chatbot import *
 
 
 #设置网页的标题
